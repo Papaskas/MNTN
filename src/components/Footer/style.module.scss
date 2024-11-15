@@ -1,0 +1,66 @@
+@import '@sass/variables', '@sass/font.mixins';
+
+.footer {
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  &__heading {
+
+    &_logo { @include heading32b; }
+    &_description { @include p18b(32px); }
+    &_copyright {
+      @include p18m;
+      color: rgba($WeiB, 0.5);
+    }
+  }
+
+  &__list {
+
+    &_heading {
+      @include heading24b;
+      color: $Accent;
+    }
+
+    &_ul {
+      @include p18m;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      > li {
+        padding: 0 15px; // gap
+        transition: all 10000ms ease-in-out;
+
+        :hover { border-bottom: 2px solid $Accent; }
+        :focus { border-bottom: 2px solid $Accent; }
+      }
+      > li:not(:first-child) {
+        list-style: '|';
+      }
+    }
+  }
+
+  @media (min-width: $XL) {
+    padding: 45px 0;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__heading {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
+    }
+
+    &__list_ul {
+      flex-direction: column;
+      gap: 15px;
+      text-align: left;
+
+      > li:not(:first-child) { list-style: none; }
+    }
+  }
+}

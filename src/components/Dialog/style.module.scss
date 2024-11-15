@@ -1,0 +1,15 @@
+@import '@sass/variables', '@sass/font.mixins';
+
+.dialog {
+  background-color: #333333;
+  border-radius: 15px;
+  border: 3px solid $Accent;
+
+  &__children {
+    @include p18b(16px);
+  }
+
+  &::backdrop {
+    background: rgba($BG, 0.7);
+  }
+}

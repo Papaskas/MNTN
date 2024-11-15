@@ -1,0 +1,11 @@
+@import '@sass/variables', '@sass/font.mixins';
+
+.button {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: $Accent;
+  @include p18m;
+  text-transform: lowercase;
+}

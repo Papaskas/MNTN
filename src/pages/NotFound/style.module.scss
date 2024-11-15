@@ -1,0 +1,11 @@
+@import '@sass/font.mixins', '@sass/variables';
+
+.not_found {
+  border: 5px solid $Accent;
+  border-radius: 15px;
+  padding: 25px;
+
+  &__heading {
+    @include heading88sb;
+  }
+}

@@ -1,0 +1,10 @@
+@import 'normalize', 'variables', 'font.mixins', 'fonts';
+
+* {
+  font-family: 'Gilroy', sans-serif;
+  color: $WeiB;
+}
+
+body {
+  background-color: $BG;
+}

@@ -1,0 +1,11 @@
+@import '@sass/variables', '@sass/font.mixins';
+
+.content {
+  display: grid;
+  gap: 50px;
+  justify-items: center;
+
+  @media (min-width: $XXL) {
+    gap: 100px;
+  }
+}

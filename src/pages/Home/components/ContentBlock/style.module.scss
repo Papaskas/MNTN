@@ -1,0 +1,64 @@
+@import '@sass/variables', '@sass/font.mixins';
+
+.content_block {
+  position: relative;
+  overflow: hidden;
+  min-height: 720px;
+  height: auto;
+  width: 100%;
+  border-radius: 10px;
+
+  &__text { padding: 15px; }
+
+  &__count {
+    position: absolute;
+    z-index: -1;
+    @include heading240b;
+    color: rgba($WeiB, 0.1);
+  }
+
+  &__title { @include heading64sb; }
+  &__description { @include p18b(32px); }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -2;
+    background: #000;
+    height: inherit;
+
+    img {
+      height: 100%;
+      width: 100%;
+      opacity: 0.5;
+      object-fit: cover;
+    }
+  }
+  
+  @media (min-width: $lg) {
+    &__text { padding: 35px; }
+  }
+  @media (min-width: $XXL) {
+    border-radius: 0;
+    display: flex;
+
+    &__text { padding: 80px; }
+
+    &__img {
+      position: static;
+      width: 566px;
+
+      img {
+        width: inherit;
+        opacity: 1;
+      }
+    }
+
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+    }
+  }
+}

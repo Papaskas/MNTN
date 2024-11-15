@@ -1,0 +1,36 @@
+@import '@sass/variables', '@sass/font.mixins';
+
+.preview {
+  display: flex;
+  justify-content: space-between;
+  padding: 300px 0 900px 0;
+
+  &__links {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+
+    &_heading {
+      writing-mode: vertical-rl;
+      white-space: nowrap;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+    }
+  }
+
+  &__heading {
+
+    &_heading {
+      @include heading88sb;
+      max-width: 1000px;
+    }
+
+    &_btn_scroll { @include p18b(22px); }
+  }
+
+  &__controls {
+
+  }
+}

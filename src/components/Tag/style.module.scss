@@ -1,0 +1,19 @@
+@import '@sass/variables', '@sass/font.mixins';
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  &_line {
+    width: 72px;
+    height: 2px;
+    background-color: $Accent;
+  }
+  &_title {
+    color: $Accent;
+    @include p18eb;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+  }
+}
